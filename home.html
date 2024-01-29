@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#" id="addBookFromContainer" onclick="toggleAddBookForm()">add your book</a></li>
+
+
+
+
+            </ul>
+
+        </nav>
+    </header>
+    <main>
+        <div class="addBook" id="addBookFormContainer" style="display: none;">
+            <h1 class="">Add Book</h1>
+            <form id="addBookForm">
+                    <h1 class="h12" style="color: aliceblue;">Book title</h2>
+                    
+                    <input type="text" id="bookTitle" name="bookTitle" required>
+
+                    <h1 class="h12" style="color: aliceblue;">Author Name</h2>
+                    
+                    <input type="text" id="authorName" name="authorName" required>
+
+                    <h1 class="h12" style="color: aliceblue;">Image URL</h2>
+                    
+                    <input type="text" id="imageUrl" name="imageUrl" required>
+                    <div class="btn"><button id="button" onclick="addBook()">Add Book</button></div>
+
+            </form>
+        </div>
+        <div class="book-list" id="bookList">
+            <div class="book">
+                <img src="./book1.jpg" alt="Book 1">
+                <h4>THE OUTSIDER</h4>
+                <p class="p1">Author:Stephen</p>
+            </div>
+            <div class="book">
+                <img src="./book2.jpg" alt="Book 2">
+                <h4>THE PAST IS RISING</h4>
+                <p class="p1">Author:khetryn</p>
+            </div>
+            <div class="book">
+                <img src="./book 3.jpg" alt="Book 2">
+                <h4>Book Title 2</h4>
+                <p class="p1">Author: Author Name 2</p>
+            </div>
+            <div class="book">
+                <img src="./book4.jpg" alt="Book 2">
+                <h4>Book Title 2</h4>
+                <p class="p1">Author: Author Name 2</p>
+            </div>
+            <div class="book">
+                <img src="./book5.webp" alt="Book 2">
+                <h4>Book Title 2</h4>
+                <p class="p1">Author: Author Name 2</p>
+            </div>
+            <div class="book">
+                <img src="book2.jpg" alt="Book 2">
+                <h4>Book Title 2</h4>
+                <p class="p1">Author: Author Name 2</p>
+            </div>
+            <div class="book">
+                <img src="book2.jpg" alt="Book 2">
+                <h4>Book Title 2</h4>
+                <p class="p1">Author: Author Name 2</p>
+            </div>
+
+
+
+
+    </main>
+    <script src="script.js"></script>
+
+    <script type="module">
+
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
+        import { getDatabase, ref, push, onValue } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-database.js";
+
+
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyDCzAMFTWOAAqAytYMh4g7KJaHKyUp2df8",
+            authDomain: "smit-7cb9d.firebaseapp.com",
+            projectId: "smit-7cb9d",
+            storageBucket: "smit-7cb9d.appspot.com",
+            messagingSenderId: "649608254564",
+            appId: "1:649608254564:web:2c453416e2b56f3f327b71"
+        };
+
+
+
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase();
+        const booksRef = ref(db, 'books');
+
+        document.getElementById("addBookForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const bookTitle = document.getElementById("bookTitle").value;
+            const authorName = document.getElementById("authorName").value;
+            const imageUrl = document.getElementById("imageUrl").value;
+
+            // Push data to Firebase
+            push(booksRef, {
+                title: bookTitle,
+                author: authorName,
+                image: imageUrl
+            });
+
+
+            document.getElementById("addBookForm").reset();
+        });
+
+        onValue(booksRef, (snapshot) => {
+            const bookListContainer = document.getElementById("bookList");
+
+
+            snapshot.forEach((childSnapshot) => {
+                const bookData = childSnapshot.val();
+
+                const bookElement = document.createElement("div");
+                bookElement.classList.add("book");
+
+                const bookImage = document.createElement("img");
+                bookImage.src = bookData.image;
+                bookImage.alt = bookData.title;
+
+                const bookTitle = document.createElement("h4");
+                bookTitle.textContent = `Book Title: ${bookData.title}`;
+
+                const bookAuthor = document.createElement("p");
+                bookAuthor.textContent = `Author: ${bookData.author}`;
+
+                bookElement.appendChild(bookImage);
+                bookElement.appendChild(bookTitle);
+                bookElement.appendChild(bookAuthor);
+
+                bookListContainer.appendChild(bookElement);
+            });
+        });
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,412 @@
+body {
+  font-family: "The Nautigal", cursive;
+  margin: 0;
+  background-color: black;
+
+
+}
+
+header {
+  background-color: black;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 40px;
+}
+
+.navbar {
+  background-color: black;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 40px;
+  ;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  margin: 10px 20px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-family: 'The Nautigal', cursive;
+  font-size: 22px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+a:hover {
+  color: aqua;
+  text-shadow: 0 0 10px aqua, 0 0 20px aqua;
+  transform: scale(1.2);
+}
+
+main {
+
+  margin-top: 9%;
+
+}
+
+.auth-container {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  border-radius: 20px;
+  transition: color transform 0.3s;
+  /* Optional: Set a background color */
+}
+
+.auth-container:hover {
+  box-shadow: 0 0 10px aqua, 0 0 20px aqua;
+}
+
+.form {
+  width: auto;
+  /* Take the full width of the container */
+  max-width: 200px;
+  /* Set a maximum width if needed */
+  padding: 20px;
+  /* Optional: Add some padding for better aesthetics */
+  margin-top: 20px;
+  /* Adjust the top margin for spacing */
+}
+
+/* Style for labels */
+.form label {
+  display: block;
+  margin-bottom: 8px;
+  color: #fff;
+  /* Optional: Set label color */
+}
+
+
+/* If you want to center the button horizontally only */
+
+
+
+.auth-container1 {
+  width: 500px;
+  height: auto;
+  margin: 0 auto;
+  /* Center the container horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  border: 2px solid white;
+  border-radius: 20px;
+  transition: color transform 0.3s;
+  /* Add some top margin if needed */
+}
+
+.auth-container1:hover {
+  box-shadow: 0 0 10px aqua, 0 0 20px aqua;
+}
+
+.slogn {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.slogn h1 {
+  font-size: 36px;
+  color: #fff;
+  margin-bottom: 20px;
+  font-family: 'The Nautigal', cursive;
+}
+
+.slogn h1 {
+  color: aqua;
+  text-shadow: 0 0 10px aqua, 0 0 20px aqua;
+
+
+}
+
+
+
+div .btn1 {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30px;
+  margin-right: 50px;
+  margin-top: 10px;
+
+
+
+
+}
+
+.btn1 button {
+  border-radius: 9px;
+  width: 90px;
+  height: 30px;
+  font-family: 'The Nautigal', cursive;
+  font-size: 22px;
+  transition: color transform 0.3s;
+  background-color: white;
+  outline: none;
+  border: none;
+
+}
+
+.singup form input {
+  width: 30px;
+  margin: 0;
+
+}
+
+
+
+
+
+.btn {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 10px;
+
+}
+
+.btn button {
+  border-radius: 9px;
+  width:100px;
+  height: 30px;
+  transition: color transform 0.3s;
+  background-color: white;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  font-family: 'The Nautigal', cursive;
+
+}
+
+button:hover {
+
+  box-shadow: 0 0 10px aqua, 0 0 20px aqua, 0 0 30px;
+  transform: scale(1.1)
+}
+
+.formlogin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formlogin label {
+  font-size: 18px;
+  color: #fff;
+}
+
+.formlogin input {
+  width: 100%;
+  /* Make the input full width */
+  margin-bottom: 10px;
+  /* Add some bottom margin between inputs */
+}
+
+.formlogin .btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  /* Add top margin to the button */
+}
+
+
+.h12 {
+  font-size: 36px bold;
+  align-items: center;
+  justify-content: center;
+  color: aqua;
+  text-shadow: 0 0 10px aqua, 0 0 20px aqua, 0 0 30px;
+}
+
+input {
+  height: 25px;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  transition: color transform 0.3s;
+}
+
+input:hover {
+  box-shadow: 0 0 10px aqua, 0 0 20px aqua, 0 0 30px;
+
+}
+
+input1 {
+  height: 20px;
+  border: none;
+  outline: none;
+  border-radius: 9px;
+  transition: color transform 0.3s;
+}
+
+input1:hover {
+  box-shadow: 0 0 10px aqua, 0 0 20px aqua, 0 0 30px;
+  transform: scale(1.2);
+}
+
+
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.addBook {
+  width: 400px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 7px;
+  transition: color transform 0.3s;
+}
+
+.addBook form {
+  width: auto;
+  margin: 0;
+  max-width: 200px;
+  /* Set a maximum width if needed */
+  padding-left:30%;
+  /* Optional: Add some padding for better aesthetics */
+  /* Adjust the top margin for spacing */
+}
+
+/* Style for labels */
+
+
+
+.book-list {
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.addBook:hover {
+  box-shadow: 0 0 10px aqua, 0 0 20px aqua, 0 0 30px
+}
+
+.addBookFormContainer,
+.book {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+
+
+.book-list {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.book img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: 150px;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  transition: color transform 0.3;
+}
+
+.book img:hover {
+  box-shadow: 0 0 10px aqua, 0 0 20px aqua, 0 0 30px;
+}
+
+
+
+
+/* .slider-container {
+    justify-content: center;
+    padding-top:40%;
+    margin:0px 70px 50px 50px;
+    width: 65%; }Adjusted width for better responsiveness */
+
+h4 {
+
+  color: #fff;
+  margin: 0;
+  text-align: center;
+  justify-content: center;
+  padding-top: 10px;
+  transition: transform 0.3s ease;
+}
+
+h4:hover {
+  color: aqua;
+  text-shadow: 0 0 10px aqua, 0 0 20px aqua;
+  transform: scale(1.1);
+}
+
+.p1 {
+  margin: 0;
+  color: white;
+  text-align: center;
+  padding-top: 0px;
+
+}
+
+.p1:hover {
+  color: aqua;
+  text-shadow: 0 0 10px aqua, 0 0 20px aqua;
+}
+
+p {
+  margin: 0;
+  color: white;
+  text-align: center;
+  padding-top: 0px;
+  font-size: 32px;
+}
+
+.addbook {
+  .auth-container {
+    max-width: 400px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+}
+
+
+
+
+
+
+/* @keyframes slide {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    33.33%, 66.66% {
+      transform: translateX(-100%);
+    }
+    66.66%, 100% {
+      transform: translateX(-200%);
+    }
+  }  */
